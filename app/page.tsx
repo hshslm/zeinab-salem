@@ -26,7 +26,7 @@ export default function LandingPage(): React.ReactElement {
         <div className="mt-12 animate-fade-in-up delay-500">
           <Link
             href="/work"
-            className="inline-flex items-center gap-3 text-sm tracking-widest uppercase text-foreground/70 hover:text-accent transition-colors duration-100"
+            className="inline-flex items-center gap-3 font-display text-sm tracking-widest uppercase text-foreground/70 hover:text-accent transition-colors duration-100"
           >
             Enter Gallery
             <svg
