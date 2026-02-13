@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "Zeinab Salem — Ceramic Artist",
   description:
     "Exploring the fragile beauty of dark raku-fired vessels. Objects born from fire, smoke, and patience.",
+  icons: {
+    icon: "/images/logo.ico",
+  },
   openGraph: {
     title: "Zeinab Salem — Ceramic Artist",
     description:

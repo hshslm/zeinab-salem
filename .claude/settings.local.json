@@ -4,7 +4,9 @@
       "Bash(npx create-next-app@latest:*)",
       "mcp__stitch__list_projects",
       "mcp__stitch__get_screen",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "WebFetch(domain:contribution.usercontent.google.com)",
+      "mcp__stitch__list_screens"
     ]
   }
 }

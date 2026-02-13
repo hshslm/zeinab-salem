@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import BackButton from "./BackButton";
 import InquiryForm from "./InquiryForm";
 import type { Product } from "@/lib/types";
 
@@ -16,15 +17,20 @@ export default function ProductDetail({
 
   return (
     <>
+      <div className="mb-10">
+        <BackButton />
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
         {/* Image */}
-        <div className="relative aspect-[4/5] overflow-hidden bg-card rounded-sm animate-fade-in-up">
+        <div className="relative overflow-hidden bg-card rounded-sm animate-fade-in-up">
           <Image
             src={product.image_url}
             alt={product.name}
-            fill
+            width={800}
+            height={1000}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="w-full h-auto object-contain"
             priority
           />
         </div>

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import ProductDetail from "@/components/ProductDetail";
 import { getProductBySlug, getAllSlugs } from "@/lib/data";
 
@@ -40,15 +41,10 @@ export default async function ProductDetailPage({
     <>
       <Header variant="detail" />
 
-      <main className="min-h-screen pt-24 pb-20 px-6 md:px-12 lg:px-20 max-w-6xl mx-auto">
+      <main className="min-h-screen pt-24 pb-20 px-6 md:px-12 lg:px-20 max-w-6xl mx-auto flex flex-col">
         <ProductDetail product={product} />
 
-        <footer className="mt-24 pt-8 border-t border-border text-center text-xs text-subtle/50">
-          <span>
-            &copy; {new Date().getFullYear()} Zeinab Salem. All Rights
-            Reserved.
-          </span>
-        </footer>
+        <Footer />
       </main>
     </>
   );

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const FORMSPREE_URL = "https://formspree.io/f/FORM_ID_PLACEHOLDER";
+const FORMSPREE_URL = "https://formspree.io/f/meelavzl";
 
 interface InquiryFormProps {
   productName?: string;
@@ -173,6 +173,7 @@ export default function InquiryForm({
                 id="inquiry-message"
                 name="message"
                 rows={4}
+                defaultValue={productName ? `Inquiry about: ${productName}${productId ? ` (#${productId})` : ""}\n\n` : ""}
                 className="w-full bg-transparent border-b border-border py-2 text-foreground placeholder:text-subtle/50 focus:border-accent focus:outline-none transition-colors resize-none"
                 placeholder="Your message..."
               />
@@ -191,6 +192,13 @@ export default function InquiryForm({
             >
               {status === "loading" ? "Sending..." : "Send Inquiry"}
             </button>
+
+            <p className="text-center text-sm text-subtle/60">
+              Or call{" "}
+              <a href="tel:+201223190242" className="text-foreground hover:text-accent transition-colors">
+                +20 122 319 0242
+              </a>
+            </p>
           </form>
         )}
       </div>

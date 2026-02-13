@@ -72,6 +72,12 @@ body {
   animation-delay: 1000ms;
 }
 
+/* Fade bottom mask for hero images */
+.fade-bottom {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
 /* Selection */
 ::selection {
   background-color: var(--color-accent);

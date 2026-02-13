@@ -9,14 +9,10 @@ export default function ProductGrid({
   products,
 }: ProductGridProps): React.ReactElement {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+    <div className="columns-1 md:columns-2 gap-4 md:gap-5">
       {products.map((product, index) => (
-        <div
-          key={product.id}
-          className="animate-fade-in-up"
-          style={{ animationDelay: `${index * 150}ms` }}
-        >
-          <ProductCard product={product} />
+        <div key={product.id} className="mb-4 md:mb-5 break-inside-avoid">
+          <ProductCard product={product} priority={index < 6} />
         </div>
       ))}
     </div>
